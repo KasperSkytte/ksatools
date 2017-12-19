@@ -1,0 +1,21 @@
+url: https://github.com/KasperSkytte/ksatools
+
+home:
+  links:
+  - text: Latest stable release
+    href: https://github.com/KasperSkytte/ksatools/releases/latest/
+
+template:
+  params:
+  bootswatch: yeti
+
+navbar:
+  title: "ksatools"
+  left:
+  - icon: fa-home fa-lg
+    href: index.html
+  - text: "Reference"
+    href: reference/index.html
+  right:
+  - icon: fa-github fa-lg
+    href: https://github.com/KasperSkytte/ksatools

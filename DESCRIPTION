@@ -1,0 +1,18 @@
+Package: ksatools
+Type: Package
+Title: Tools to make your R life easier
+Description: Tools to make your R life easier.
+Version: 0.1.0
+Author: Kasper Skytte Andersen
+Maintainer: Kasper Skytte Andersen <kasperskytteandersen@gmail.com>
+Authors@R: person(c("Kasper", "Skytte"), "Andersen", role = c("cre", "aut"), email = "kasperskytteandersen@gmail.com")
+License: AGPL-3
+Depends:
+    R (>= 3.4.3)
+Imports: 
+    devtools,
+    roxygen2,
+    pkgdown
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
