@@ -7,7 +7,7 @@ home:
 
 template:
   params:
-  bootswatch: yeti
+    bootswatch: simplex
 
 navbar:
   title: "ksatools"
