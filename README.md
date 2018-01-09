@@ -1,2 +1,2 @@
 # ksatools
-Tools to make your R life easier
+Tools to make my R life easier

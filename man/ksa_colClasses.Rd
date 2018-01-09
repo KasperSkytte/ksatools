@@ -8,9 +8,13 @@ ksa_colClasses(df)
 }
 \arguments{
 \item{df}{A data frame like object}
-
-\item{value}{A character vector with the column classes of the provided data frame.}
+}
+\value{
+A character vector with the column classes of the provided data frame.
 }
 \description{
 Returns a vector with the column classes of a data frame like object.
+}
+\examples{
+ksa_colClasses(iris)
 }
