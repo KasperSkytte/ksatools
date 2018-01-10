@@ -2,7 +2,7 @@
 % Please edit documentation in R/ksa_colClasses.R
 \name{ksa_colClasses}
 \alias{ksa_colClasses}
-\title{Column classes}
+\title{Get the column classes of a data frame}
 \usage{
 ksa_colClasses(df)
 }

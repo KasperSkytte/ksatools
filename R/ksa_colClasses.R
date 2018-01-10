@@ -1,4 +1,4 @@
-#' @title Column classes
+#' @title Get the column classes of a data frame
 #' @description Returns a vector with the column classes of a data frame like object.
 #'
 #' @param df A data frame like object

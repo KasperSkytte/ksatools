@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Generate package webpage — ksa_pkgdocs • ksatools</title>
+<title>Clear (global) environment and free up memory — ksa_clearEnv • ksatools</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -80,21 +80,54 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Generate package webpage</h1>
+    <h1>Clear (global) environment and free up memory</h1>
     </div>
 
     
-    <p>Just runs <code><a href='http://www.rdocumentation.org/packages/roxygen2/topics/roxygenize'>roxygen2::roxygenize(); pkgdown::clean_site(); pkgdown::build_site()</a></code></p>
+    <p>Removes all objects in the global environment including hidden object, and afterwards runs the garbage collector to free up memory.</p>
     
 
-    <pre class="usage"><span class='fu'>ksa_pkgdocs</span>()</pre>
-        
+    <pre class="usage"><span class='fu'>ksa_clearEnv</span>(<span class='kw'>envir</span> <span class='kw'>=</span> <span class='no'>.GlobalEnv</span>, <span class='kw'>hidden</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>envir</th>
+      <td><p><em>(optional)</em> The environment to clear. <em>default:</em> <code>.GlobalEnv</code></p></td>
+    </tr>
+    <tr>
+      <th>hidden</th>
+      <td><p><em>(optional)</em> Include hidden objects (those starting with a dot "."). <em>default:</em> <code>TRUE</code></p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
+    <p>Prints the removed objects, their classes, and the output from garbage collector.</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>assign</span>(<span class='st'>"test"</span>, <span class='st'>"test"</span>, <span class='kw'>envir</span> <span class='kw'>=</span> <span class='no'>.GlobalEnv</span>)
+<span class='fu'>ksa_clearEnv</span>()</div><div class='output co'>#&gt; The following 2 objects were removed:
+#&gt;      *object*   *class*
+#&gt;  .Random.seed   integer
+#&gt;          test character
+#&gt; 
+#&gt; Garbage collector:</div><div class='output co'>#&gt;           used  (Mb) gc trigger  (Mb) max used  (Mb)
+#&gt; Ncells 2306389 123.2    3886542 207.6  2306389 123.2
+#&gt; Vcells 4554808  34.8    7959639  60.8  4554808  34.8</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-                </ul>
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
 </div>
