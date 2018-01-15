@@ -3,5 +3,6 @@
 export(ksa_clearEnv)
 export(ksa_colClasses)
 export(ksa_pkgDocs)
+export(ksa_suppressAll)
 import(pkgdown)
 import(roxygen2)

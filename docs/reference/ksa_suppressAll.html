@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • ksatools</title>
+<title>Suppress all types of diagnostic messages, error messages, and/or outputs — ksa_suppressAll • ksatools</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -37,7 +37,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -78,64 +78,44 @@
       </header>
 
       <div class="row">
-  <div class="col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>
-        Reference
-        <small>version&nbsp;0.3.0</small>
-      </h1>
+    <h1>Suppress all types of diagnostic messages, error messages, and/or outputs</h1>
     </div>
 
-    <div class="contents">
-      <table class="ref-index">
+    
+    <p>Simply wraps the given expression in <code>tryCatch</code>, <code>invisible</code>, <code>capture.output</code>, <code>suppressMessages</code>, <code>suppressWarnings</code>, and <code>suppressPackageStartupMessages</code> to suppress any possible console output.</p>
+    
 
-      <colgroup>
-        <col class="alias" />
-        <col class="title" />
-      </colgroup>
+    <pre class="usage"><span class='fu'>ksa_suppressAll</span>(<span class='no'>expr</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>expr</th>
+      <td><p>Expression to be evaluated.</p></td>
+    </tr>
+    </table>
+    
 
-      <tbody>
-        <tr>
-          <th colspan="2">
-            <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-            <p class="section-desc"></p>
-          </th>
-        </tr>
-        <tr>
-          <!--  -->
-          <td>
-            <p><code><a href="ksa_clearEnv.html">ksa_clearEnv</a></code> </p>
-          </td>
-          <td><p>Clear (global) environment and free up memory</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="ksa_colClasses.html">ksa_colClasses</a></code> </p>
-          </td>
-          <td><p>Get the column classes of a data frame</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="ksa_pkgDocs.html">ksa_pkgDocs</a></code> </p>
-          </td>
-          <td><p>Generate package documentation and webpage</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="ksa_suppressAll.html">ksa_suppressAll</a></code> </p>
-          </td>
-          <td><p>Suppress all types of diagnostic messages, error messages, and/or outputs</p></td>
-        </tr>
-      </tbody>
-      </table>
-    </div>
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>ksa_suppressAll</span>({
+  <span class='fu'>stop</span>(<span class='st'>"Some error"</span>)
+  <span class='fu'>print</span>(<span class='st'>"Some print"</span>)
+  <span class='fu'>message</span>(<span class='st'>"Some message"</span>)
+  <span class='no'>some_variable</span> <span class='kw'>&lt;-</span> <span class='st'>"test"</span>
+  <span class='fu'>return</span>(<span class='no'>some_variable</span>)
+  })</div></pre>
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#arguments">Arguments</a></li>
+            
+      <li><a href="#examples">Examples</a></li>
     </ul>
+
   </div>
 </div>
 
