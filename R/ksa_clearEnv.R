@@ -16,12 +16,12 @@ ksa_clearEnv <- function(envir = .GlobalEnv,
   objects <- ls(envir = envir, all.names = hidden)
   classes <- c()
   for(i in 1:length(objects)) {
-    classes <- append(classes, class(get(objects[[i]])))
+    classes <- append(classes, paste0(class(get(objects[[i]])), collapse = ", "))
     }
   if(length(objects) > 0) {
     rm(list = objects, envir = envir)
     cat("The following", length(objects), "objects were removed:\n")
-    print.data.frame(data.frame("*object*" = objects, "*class*" = classes, check.names = FALSE), row.names = FALSE)
+    print.data.frame(data.frame("*object*" = objects, "*class*" = classes, check.names = FALSE), row.names = FALSE, right = FALSE)
   } else if(length(objects) == 0) {
     cat("0 objects were removed")
   }

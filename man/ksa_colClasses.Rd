@@ -2,7 +2,7 @@
 % Please edit documentation in R/ksa_colClasses.R
 \name{ksa_colClasses}
 \alias{ksa_colClasses}
-\title{Get the column classes of a data frame}
+\title{Column classes of a data frame}
 \usage{
 ksa_colClasses(df)
 }
@@ -10,10 +10,13 @@ ksa_colClasses(df)
 \item{df}{A data frame like object}
 }
 \value{
-A character vector with the column classes of the provided data frame.
+A data frame containing the column classes of the provided data frame.
 }
 \description{
 Returns a vector with the column classes of a data frame like object.
+}
+\note{
+Cannot handle columns with more than one class.
 }
 \examples{
 ksa_colClasses(iris)

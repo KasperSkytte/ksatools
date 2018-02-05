@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get the column classes of a data frame — ksa_colClasses • ksatools</title>
+<title>Column classes of a data frame — ksa_colClasses • ksatools</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -80,7 +80,7 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get the column classes of a data frame</h1>
+    <h1>Column classes of a data frame</h1>
     </div>
 
     
@@ -100,12 +100,20 @@
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A character vector with the column classes of the provided data frame.</p>
+    <p>A data frame containing the column classes of the provided data frame.</p>
+    
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    <p>Cannot handle columns with more than one class.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>ksa_colClasses</span>(<span class='no'>iris</span>)</div><div class='output co'>#&gt; Sepal.Length  Sepal.Width Petal.Length  Petal.Width      Species 
-#&gt;    "numeric"    "numeric"    "numeric"    "numeric"     "factor" </div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>ksa_colClasses</span>(<span class='no'>iris</span>)</div><div class='output co'>#&gt;                class
+#&gt; Sepal.Length numeric
+#&gt; Sepal.Width  numeric
+#&gt; Petal.Length numeric
+#&gt; Petal.Width  numeric
+#&gt; Species       factor</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -113,6 +121,8 @@
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
+
+      <li><a href="#note">Note</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>
