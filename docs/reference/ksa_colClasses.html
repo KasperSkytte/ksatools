@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Column classes of a data frame — ksa_colClasses • ksatools</title>
+<title>Get or set the column classes of a dataframe — ksa_colClasses • ksatools</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -80,11 +80,11 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Column classes of a data frame</h1>
+    <h1>Get or set the column classes of a dataframe</h1>
     </div>
 
     
-    <p>Returns a vector with the column classes of a data frame like object.</p>
+    <p>Returns a vector with the column classes of a dataframe like object, or coerces the column classes as defined by user.</p>
     
 
     <pre class="usage"><span class='fu'>ksa_colClasses</span>(<span class='no'>df</span>)</pre>
@@ -94,13 +94,17 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>df</th>
-      <td><p>A data frame like object</p></td>
+      <td><p>Dataframe like object</p></td>
+    </tr>
+    <tr>
+      <th>value</th>
+      <td><p>Character vector containing elements of: <code>"c"</code> (character), <code>"n"</code> (numeric), <code>"f"</code> (factor), <code>"l"</code> (logical)" to set the column classes of <code>df</code>.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A data frame containing the column classes of the provided data frame.</p>
+    <p>A dataframe containing the column classes of the provided dataframe, or a dataframe with coerced columns</p>
     
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
@@ -108,12 +112,19 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>ksa_colClasses</span>(<span class='no'>iris</span>)</div><div class='output co'>#&gt;                class
+    <pre class="examples"><div class='input'><span class='no'>df</span> <span class='kw'>&lt;-</span> <span class='no'>iris</span>[<span class='fl'>1</span>:<span class='fl'>10</span>,]
+<span class='fu'>ksa_colClasses</span>(<span class='no'>df</span>)</div><div class='output co'>#&gt;                class
 #&gt; Sepal.Length numeric
 #&gt; Sepal.Width  numeric
 #&gt; Petal.Length numeric
 #&gt; Petal.Width  numeric
-#&gt; Species       factor</div></pre>
+#&gt; Species       factor</div><div class='input'><span class='fu'>ksa_colClasses</span>(<span class='no'>df</span>) <span class='kw'>&lt;-</span> <span class='st'>"nncfc"</span>
+<span class='fu'>ksa_colClasses</span>(<span class='no'>df</span>)</div><div class='output co'>#&gt;                  class
+#&gt; Sepal.Length   numeric
+#&gt; Sepal.Width    numeric
+#&gt; Petal.Length character
+#&gt; Petal.Width     factor
+#&gt; Species      character</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

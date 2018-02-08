@@ -2,22 +2,27 @@
 % Please edit documentation in R/ksa_colClasses.R
 \name{ksa_colClasses}
 \alias{ksa_colClasses}
-\title{Column classes of a data frame}
+\title{Get or set the column classes of a dataframe}
 \usage{
 ksa_colClasses(df)
 }
 \arguments{
-\item{df}{A data frame like object}
+\item{df}{Dataframe like object}
+
+\item{value}{Character vector containing elements of: \code{"c"} (character), \code{"n"} (numeric), \code{"f"} (factor), \code{"l"} (logical)" to set the column classes of \code{df}.}
 }
 \value{
-A data frame containing the column classes of the provided data frame.
+A dataframe containing the column classes of the provided dataframe, or a dataframe with coerced columns
 }
 \description{
-Returns a vector with the column classes of a data frame like object.
+Returns a vector with the column classes of a dataframe like object, or coerces the column classes as defined by user.
 }
 \note{
 Cannot handle columns with more than one class.
 }
 \examples{
-ksa_colClasses(iris)
+df <- iris[1:10,]
+ksa_colClasses(df)
+ksa_colClasses(df) <- "nncfc"
+ksa_colClasses(df)
 }

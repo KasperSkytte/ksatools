@@ -9,6 +9,14 @@ template:
   params:
     bootswatch: simplex
 
+reference:
+  - title: Functions
+    contents:
+    - ksa_colClasses
+    - ksa_clearEnv
+    - ksa_pkgDocs
+    - ksa_suppressAll
+
 navbar:
   title: "ksatools"
   left:
