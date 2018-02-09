@@ -20,7 +20,6 @@ Cannot handle columns with more than one class.
 }
 \examples{
 df <- iris[1:10,]
-ksa_colClasses(df)
-ksa_colClasses(df) <- "nncfc"
+df
 ksa_colClasses(df)
 }

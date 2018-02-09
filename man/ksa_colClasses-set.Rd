@@ -16,6 +16,7 @@ A dataframe with coerced columns
 }
 \examples{
 df <- iris[1:10,]
+df
 ksa_colClasses(df)
 ksa_colClasses(df) <- "nncfc"
 ksa_colClasses(df)
