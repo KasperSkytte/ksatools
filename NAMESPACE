@@ -2,9 +2,8 @@
 
 export(ksa_clearEnv)
 export(ksa_colClasses)
-export(ksa_is_even)
-export(ksa_is_odd)
 export(ksa_pkgDocs)
 export(ksa_suppressAll)
+import(crayon)
 import(pkgdown)
 import(roxygen2)

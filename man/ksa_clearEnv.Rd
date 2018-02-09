@@ -15,7 +15,7 @@ ksa_clearEnv(envir = .GlobalEnv, hidden = TRUE)
 Prints the removed objects, their classes, and the output from garbage collector.
 }
 \description{
-Removes all objects in the global environment including hidden object, and afterwards runs the garbage collector to free up memory.
+Removes all objects in the global environment including hidden objects, and afterwards runs the garbage collector to free up memory.
 }
 \examples{
 assign("test", "test", envir = .GlobalEnv)

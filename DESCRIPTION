@@ -11,7 +11,8 @@ Depends:
     R (>= 3.4.3)
 Imports: 
     devtools,
-    roxygen2
+    roxygen2,
+    crayon
 Remotes:
     github::hadley/pkgdown
 Encoding: UTF-8

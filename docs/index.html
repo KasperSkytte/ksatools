@@ -56,11 +56,26 @@
       
       </header><div class="row">
   <div class="contents col-md-9">
-    <div id="ksatools" class="section level1">
+    
+
+<div id="ksatools" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#ksatools" class="anchor"></a>ksatools</h1></div>
-<p>Tools to make my R life easier</p>
+<blockquote>
+<p>Tools to make my R life easier.</p>
+</blockquote>
+<p>See the <a href="https://kasperskytte.github.io/ksatools/reference/index.html">function reference</a> for documentation.</p>
+<div id="installation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#installation" class="anchor"></a>Installation</h2>
+<p>Just copy/paste the following:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(remotes)) {
+  <span class="kw">install.packages</span>(<span class="st">"devtools"</span>)
+}
+devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"kasperskytte/ksatools"</span>)</code></pre></div>
 </div>
+</div>
+
   </div>
 
   <div class="col-md-3" id="sidebar">
@@ -75,6 +90,10 @@
 <ul class="list-unstyled">
 <li>Kasper Skytte Andersen <br><small class="roles"> Maintainer, author </small> </li>
 </ul>
+<h2>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://travis-ci.org/KasperSkytte/ksatools"><img src="https://travis-ci.org/KasperSkytte/ksatools.svg?branch=master" alt="Travis-CI Build Status"></a></li>
+</ul>
 </div>
 </div>
 
@@ -84,7 +103,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+  <p>Site built with <a href="http://pkgdown.r-lib.org/">pkgdown</a>.</p>
 </div>
 
       </footer>

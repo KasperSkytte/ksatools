@@ -17,6 +17,7 @@ ksa_suppressAll({
   stop("Some error")
   print("Some print")
   message("Some message")
+  warning("Some warning")
   some_variable <- "test"
   return(some_variable)
   })
