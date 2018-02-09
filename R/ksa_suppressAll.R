@@ -3,7 +3,6 @@
 #'
 #' @param expr Expression to be evaluated.
 #'
-#' @return
 #' @export
 #'
 #' @examples

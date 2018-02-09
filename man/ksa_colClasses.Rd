@@ -2,17 +2,15 @@
 % Please edit documentation in R/ksa_colClasses.R
 \name{ksa_colClasses}
 \alias{ksa_colClasses}
-\title{Get or set the column classes of a dataframe}
+\title{Get the column classes of a dataframe}
 \usage{
 ksa_colClasses(df)
 }
 \arguments{
 \item{df}{Dataframe like object}
-
-\item{value}{Character vector containing elements of: \code{"c"} (character), \code{"n"} (numeric), \code{"f"} (factor), \code{"l"} (logical)" to set the column classes of \code{df}.}
 }
 \value{
-A dataframe containing the column classes of the provided dataframe, or a dataframe with coerced columns
+A dataframe containing the column classes of the provided dataframe
 }
 \description{
 Returns a vector with the column classes of a dataframe like object, or coerces the column classes as defined by user.

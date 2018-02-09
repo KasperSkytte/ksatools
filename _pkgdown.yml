@@ -13,6 +13,7 @@ reference:
   - title: Functions
     contents:
     - ksa_colClasses
+    - ksa_colClasses<-
     - ksa_clearEnv
     - ksa_pkgDocs
     - ksa_suppressAll
