@@ -12,7 +12,8 @@ Depends:
 Imports: 
     devtools,
     roxygen2,
-    crayon
+    crayon,
+    pkgdown
 Remotes:
     github::hadley/pkgdown
 Encoding: UTF-8
