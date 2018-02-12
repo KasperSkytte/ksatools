@@ -8,7 +8,7 @@ See the [function reference](https://kasperskytte.github.io/ksatools/reference/i
 ## Installation
 Just copy/paste the following:
 ```r
-if(!require(remotes)) {
+if(!require(devtools)) {
   install.packages("devtools")
 }
 devtools::install_github("kasperskytte/ksatools")
