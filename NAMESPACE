@@ -3,6 +3,7 @@
 export("ksa_colClasses<-")
 export(ksa_clearEnv)
 export(ksa_colClasses)
+export(ksa_funsInFile)
 export(ksa_pkgDocs)
 export(ksa_suppressAll)
 import(crayon)
