@@ -4,11 +4,19 @@
 \alias{ksa_funsInFile}
 \title{List all R functions used in a file}
 \usage{
-ksa_funsInFile(filename, alphabetic = TRUE, include_base = FALSE)
+ksa_funsInFile(filename, alphabetic = TRUE, exclude_pkgs = c("base",
+  "stats", "utils", "methods", "graphics", "grDevices"))
 }
 \arguments{
-\item{include_base}{}
+\item{filename}{Path to the R script file (only the .R extension is supported)}
+
+\item{alphabetic}{Sort the result alphabetically or not. (\emph{Default:} \code{TRUE})}
+
+\item{exclude_pkgs}{A vector of packagenames that should be excluded from the result. Set to \code{NULL} to include all. (\emph{Default:} \code{c("base", "stats", "utils", "methods", "graphics", "grDevices")})}
+}
+\value{
+A list of function names found in \code{filename} grouped by package
 }
 \description{
-List all R functions used in a file
+Searches an .R file for function names and returns a list with the names of all functions found, grouped by package(s) that contain the functions. Only searches in the current namespace, so only attached packages will be searched for the function names.
 }

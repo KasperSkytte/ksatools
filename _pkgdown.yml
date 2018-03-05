@@ -17,6 +17,7 @@ reference:
     - ksa_clearEnv
     - ksa_pkgDocs
     - ksa_suppressAll
+    - ksa_funsInFile
 
 navbar:
   title: "ksatools"

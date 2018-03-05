@@ -7,7 +7,7 @@
 #' @return Prints the removed objects, their classes, and the output from garbage collector.
 #' @export
 #'
-#' @import crayon
+#' @importFrom crayon underline
 #'
 #' @examples
 #' assign("test", "test", envir = .GlobalEnv)

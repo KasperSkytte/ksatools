@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Generate package documentation and webpage — ksa_pkgDocs • ksatools</title>
+<title>List all R functions used in a file — ksa_funsInFile • ksatools</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -27,9 +27,9 @@
 <script src="../pkgdown.js"></script>
   
   
-<meta property="og:title" content="Generate package documentation and webpage — ksa_pkgDocs" />
+<meta property="og:title" content="List all R functions used in a file — ksa_funsInFile" />
 
-<meta property="og:description" content="Just runs roxygen2::roxygenize(); pkgdown::clean_site(); pkgdown::build_site(). I ran this so many times now that a small function like this is actually useful." />
+<meta property="og:description" content="Searches an .R file for function names and returns a list with the names of all functions found, grouped by package(s) that contain the functions. Only searches in the current namespace, so only attached packages will be searched for the function names." />
 <meta name="twitter:card" content="summary" />
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
@@ -86,21 +86,46 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Generate package documentation and webpage</h1>
+    <h1>List all R functions used in a file</h1>
     </div>
 
     
-    <p>Just runs <code><a href='http://www.rdocumentation.org/packages/roxygen2/topics/roxygenize'>roxygen2::roxygenize(); pkgdown::clean_site(); pkgdown::build_site()</a></code>. I ran this so many times now that a small function like this is actually useful.</p>
+    <p>Searches an .R file for function names and returns a list with the names of all functions found, grouped by package(s) that contain the functions. Only searches in the current namespace, so only attached packages will be searched for the function names.</p>
     
 
-    <pre class="usage"><span class='fu'>ksa_pkgDocs</span>()</pre>
-        
+    <pre class="usage"><span class='fu'>ksa_funsInFile</span>(<span class='no'>filename</span>, <span class='kw'>alphabetic</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>exclude_pkgs</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='st'>"base"</span>,
+  <span class='st'>"stats"</span>, <span class='st'>"utils"</span>, <span class='st'>"methods"</span>, <span class='st'>"graphics"</span>, <span class='st'>"grDevices"</span>))</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>filename</th>
+      <td><p>Path to the R script file (only the .R extension is supported)</p></td>
+    </tr>
+    <tr>
+      <th>alphabetic</th>
+      <td><p>Sort the result alphabetically or not. (<em>Default:</em> <code>TRUE</code>)</p></td>
+    </tr>
+    <tr>
+      <th>exclude_pkgs</th>
+      <td><p>A vector of packagenames that should be excluded from the result. Set to <code>NULL</code> to include all. (<em>Default:</em> <code>c("base", "stats", "utils", "methods", "graphics", "grDevices")</code>)</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A list of function names found in <code>filename</code> grouped by package</p>
+    
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-                </ul>
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
+          </ul>
 
   </div>
 </div>

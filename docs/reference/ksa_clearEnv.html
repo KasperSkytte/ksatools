@@ -18,6 +18,8 @@
 <!-- Font Awesome icons -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
+<!-- clipboard.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -25,6 +27,10 @@
 <script src="../pkgdown.js"></script>
   
   
+<meta property="og:title" content="Clear (global) environment and free up memory — ksa_clearEnv" />
+
+<meta property="og:description" content="Removes all objects in the global environment including hidden objects, and afterwards runs the garbage collector to free up memory." />
+<meta name="twitter:card" content="summary" />
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -109,14 +115,15 @@
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>assign</span>(<span class='st'>"test"</span>, <span class='st'>"test"</span>, <span class='kw'>envir</span> <span class='kw'>=</span> <span class='no'>.GlobalEnv</span>)
-<span class='fu'>ksa_clearEnv</span>()</div><div class='output co'>#&gt; The following 2 objects were removed:
-#&gt;  *object*     *class*  
-#&gt;  .Random.seed integer  
-#&gt;  test         character
+<span class='fu'>ksa_clearEnv</span>()</div><div class='output co'>#&gt; The following 3 objects were removed:
+#&gt;  *object*       *class*  
+#&gt;  .Random.seed   integer  
+#&gt;  ksa_funsInFile function 
+#&gt;  test           character
 #&gt; 
 #&gt; Garbage collector:</div><div class='output co'>#&gt;           used (Mb) gc trigger (Mb) max used (Mb)
-#&gt; Ncells  780010 41.7    1442291 77.1   780010 41.7
-#&gt; Vcells 1272256  9.8    3244745 24.8  1272256  9.8</div><div class='input'>
+#&gt; Ncells  937299 50.1    1442291 77.1   937299 50.1
+#&gt; Vcells 1655678 12.7    3873461 29.6  1655678 12.7</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -146,3 +153,4 @@
 
   </body>
 </html>
+
