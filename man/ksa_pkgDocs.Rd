@@ -2,7 +2,7 @@
 % Please edit documentation in R/ksa_pkgDocs.R
 \name{ksa_pkgDocs}
 \alias{ksa_pkgDocs}
-\title{Generate package documentation and webpage}
+\title{Build, install, and roxygenize() a package, then generate webpage}
 \usage{
 ksa_pkgDocs()
 }

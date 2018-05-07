@@ -25,9 +25,12 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-  
-  
+
+
+
 <meta property="og:title" content="Function reference" />
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -50,8 +53,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">ksatools</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">ksatools</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.4.3</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -73,6 +80,7 @@
   </a>
 </li>
       </ul>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -80,70 +88,65 @@
       
       </header>
 
-      <div class="row">
-  <div class="col-md-9">
+<div class="row">
+  <div class="contents col-md-9">
     <div class="page-header">
-      <h1>
-        Reference
-        <small>version&nbsp;0.4.2</small>
-      </h1>
+      <h1>Reference</h1>
     </div>
 
-    <div class="contents">
-      <table class="ref-index">
+    <table class="ref-index">
 
-      <colgroup>
-        <col class="alias" />
-        <col class="title" />
-      </colgroup>
+    <colgroup>
+      <col class="alias" />
+      <col class="title" />
+    </colgroup>
 
-      <tbody>
-        <tr>
-          <th colspan="2">
-            <h2 id="section-functions" class="hasAnchor"><a href="#section-functions" class="anchor"></a>Functions</h2>
-            <p class="section-desc"></p>
-          </th>
-        </tr>
-        <tr>
-          <!--  -->
-          <td>
-            <p><code><a href="ksa_colClasses.html">ksa_colClasses</a></code> </p>
-          </td>
-          <td><p>Get the column classes of a dataframe</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="ksa_colClasses-set.html">ksa_colClasses<-</a></code> </p>
-          </td>
-          <td><p>Set (coerce) the column classes of a dataframe</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="ksa_clearEnv.html">ksa_clearEnv</a></code> </p>
-          </td>
-          <td><p>Clear (global) environment and free up memory</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="ksa_pkgDocs.html">ksa_pkgDocs</a></code> </p>
-          </td>
-          <td><p>Generate package documentation and webpage</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="ksa_suppressAll.html">ksa_suppressAll</a></code> </p>
-          </td>
-          <td><p>Suppress all types of diagnostic messages, error messages, and/or outputs</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="ksa_funsInFile.html">ksa_funsInFile</a></code> </p>
-          </td>
-          <td><p>List all R functions used in a file</p></td>
-        </tr>
-      </tbody>
-      </table>
-    </div>
+    <tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-functions" class="hasAnchor"><a href="#section-functions" class="anchor"></a>Functions</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        <!--  -->
+        <td>
+          <p><code><a href="ksa_colClasses.html">ksa_colClasses()</a></code> </p>
+        </td>
+        <td><p>Get the column classes of a dataframe</p></td>
+      </tr><tr>
+        <!--  -->
+        <td>
+          <p><code><a href="ksa_colClasses-set.html">`ksa_colClasses<-`()</a></code> </p>
+        </td>
+        <td><p>Set (coerce) the column classes of a dataframe</p></td>
+      </tr><tr>
+        <!--  -->
+        <td>
+          <p><code><a href="ksa_clearEnv.html">ksa_clearEnv()</a></code> </p>
+        </td>
+        <td><p>Clear (global) environment and free up memory</p></td>
+      </tr><tr>
+        <!--  -->
+        <td>
+          <p><code><a href="ksa_pkgDocs.html">ksa_pkgDocs()</a></code> </p>
+        </td>
+        <td><p>Build, install, and roxygenize() a package, then generate webpage</p></td>
+      </tr><tr>
+        <!--  -->
+        <td>
+          <p><code><a href="ksa_suppressAll.html">ksa_suppressAll()</a></code> </p>
+        </td>
+        <td><p>Suppress all types of diagnostic messages, error messages, and/or outputs</p></td>
+      </tr><tr>
+        <!--  -->
+        <td>
+          <p><code><a href="ksa_funsInFile.html">ksa_funsInFile()</a></code> </p>
+        </td>
+        <td><p>List all R functions used in a file</p></td>
+      </tr>
+    </tbody>
+    </table>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -165,6 +168,8 @@
 
       </footer>
    </div>
+
+  
 
   </body>
 </html>

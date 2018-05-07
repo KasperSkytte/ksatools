@@ -25,12 +25,15 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-  
-  
+
+
+
 <meta property="og:title" content="Suppress all types of diagnostic messages, error messages, and/or outputs — ksa_suppressAll" />
 
 <meta property="og:description" content="Simply wraps the given expression in tryCatch, invisible, capture.output, suppressMessages, suppressWarnings, and suppressPackageStartupMessages to suppress any possible console output." />
 <meta name="twitter:card" content="summary" />
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -53,8 +56,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">ksatools</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">ksatools</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.4.3</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -76,6 +83,7 @@
   </a>
 </li>
       </ul>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -83,19 +91,23 @@
       
       </header>
 
-      <div class="row">
+<div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Suppress all types of diagnostic messages, error messages, and/or outputs</h1>
+    
+    <div class="hidden name"><code>ksa_suppressAll.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Simply wraps the given expression in <code>tryCatch</code>, <code>invisible</code>, <code>capture.output</code>, <code>suppressMessages</code>, <code>suppressWarnings</code>, and <code>suppressPackageStartupMessages</code> to suppress any possible console output.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>ksa_suppressAll</span>(<span class='no'>expr</span>)</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
@@ -137,6 +149,8 @@
 
       </footer>
    </div>
+
+  
 
   </body>
 </html>

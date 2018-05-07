@@ -2,11 +2,12 @@ Package: ksatools
 Type: Package
 Title: Tools to make my R life easier
 Description: Tools to make my R life easier.
-Version: 0.4.2
+Version: 0.4.3
 Author: Kasper Skytte Andersen
 Maintainer: Kasper Skytte Andersen <kasperskytteandersen@gmail.com>
 Authors@R: person(c("Kasper", "Skytte"), "Andersen", role = c("cre", "aut"), email = "kasperskytteandersen@gmail.com")
 License: AGPL-3
+BugReports: https://github.com/kasperskytte/ksatools/issues
 Depends:
     R (>= 3.4.2)
 Imports: 
