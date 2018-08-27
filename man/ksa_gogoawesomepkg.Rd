@@ -4,10 +4,13 @@
 \alias{ksa_gogoawesomepkg}
 \title{Document, check, and install a package}
 \usage{
-ksa_gogoawesomepkg(install = TRUE, pkgdown = TRUE, verbose = TRUE)
+ksa_gogoawesomepkg(check = FALSE, install = TRUE, pkgdown = TRUE,
+  verbose = TRUE)
 }
 \arguments{
-\item{install}{Install the package (\code{TRUE}) with \code{\link[devtools]{install}} or just load it in memory (\code{FALSE}) with \code{\link[devtools]{load_all}}. (Default: \code{TRUE})}
+\item{check}{Check the package using \code{\link[devtools]{check}} or not. (Default: \code{TRUE})}
+
+\item{install}{Install the package (\code{TRUE}) using \code{\link[devtools]{install}} or just load it in memory (\code{FALSE}) using \code{\link[devtools]{load_all}}. (Default: \code{TRUE})}
 
 \item{pkgdown}{Build package documentation website or not. (Default: \code{TRUE})}
 
