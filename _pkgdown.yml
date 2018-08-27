@@ -15,7 +15,7 @@ reference:
     - ksa_colClasses
     - ksa_colClasses<-
     - ksa_clearEnv
-    - ksa_pkgDocs
+    - ksa_gogoawesomepkg
     - ksa_suppressAll
     - ksa_funsInFile
 

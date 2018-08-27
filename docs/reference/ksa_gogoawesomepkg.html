@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Build, install, and roxygenize() a package, then generate webpage — ksa_pkgDocs • ksatools</title>
+<title>Document, check, and install a package — ksa_gogoawesomepkg • ksatools</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -21,17 +21,20 @@
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
 
+<!-- sticky kit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
 
 
 
-<meta property="og:title" content="Build, install, and roxygenize() a package, then generate webpage — ksa_pkgDocs" />
+<meta property="og:title" content="Document, check, and install a package — ksa_gogoawesomepkg" />
 
-<meta property="og:description" content="Just runs roxygen2::roxygenize(); pkgdown::clean_site(); pkgdown::build_site(). I ran this so many times now that a small function like this is actually useful." />
+<meta property="og:description" content="Everything I do before commiting changes to GitHub. Generates package man pages, checks, installs, and builds package documentation website etc." />
 <meta name="twitter:card" content="summary" />
+
 
 
 <!-- mathjax -->
@@ -58,7 +61,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">ksatools</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.4.3</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.5</span>
       </span>
     </div>
 
@@ -94,25 +97,49 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Build, install, and roxygenize() a package, then generate webpage</h1>
+    <h1>Document, check, and install a package</h1>
     
-    <div class="hidden name"><code>ksa_pkgDocs.Rd</code></div>
+    <div class="hidden name"><code>ksa_gogoawesomepkg.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Just runs <code><a href='http://www.rdocumentation.org/packages/roxygen2/topics/roxygenize'>roxygen2::roxygenize(); pkgdown::clean_site(); pkgdown::build_site()</a></code>. I ran this so many times now that a small function like this is actually useful.</p>
+    <p>Everything I do before commiting changes to GitHub. Generates package man pages, checks, installs, and builds package documentation website etc.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>ksa_pkgDocs</span>()</pre>
-        
+    <pre class="usage"><span class='fu'>ksa_gogoawesomepkg</span>(<span class='kw'>install</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>pkgdown</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>install</th>
+      <td><p>Install the package (<code>TRUE</code>) with <code><a href='http://www.rdocumentation.org/packages/devtools/topics/install'>install</a></code> or just load it in memory (<code>FALSE</code>) with <code><a href='http://www.rdocumentation.org/packages/devtools/topics/load_all'>load_all</a></code>. (Default: <code>TRUE</code>)</p></td>
+    </tr>
+    <tr>
+      <th>pkgdown</th>
+      <td><p>Build package documentation website or not. (Default: <code>TRUE</code>)</p></td>
+    </tr>
+    <tr>
+      <th>verbose</th>
+      <td><p>Print status messages during the process or not. (Default: <code>TRUE</code>)</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>Invisibly returns a list with the output of all steps run.</p>
+    
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-                </ul>
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
+          </ul>
 
   </div>
 </div>
