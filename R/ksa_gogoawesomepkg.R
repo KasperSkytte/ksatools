@@ -11,7 +11,7 @@
 #' @importFrom cli cat_line cat_rule cat_boxx
 #' @export
 #' @return Invisibly returns a list with the output of all steps run.
-ksa_gogoawesomepkg <- function(check = FALSE,
+ksa_gogoawesomepkg <- function(check = TRUE,
                                install = TRUE,
                                pkgdown = TRUE,
                                verbose = TRUE) {
