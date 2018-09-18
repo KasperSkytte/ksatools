@@ -18,6 +18,7 @@ Imports:
     styler,
     foreach,
     parallel,
+    doParallel,
     rprojroot
 Remotes:
     github::hadley/pkgdown,
