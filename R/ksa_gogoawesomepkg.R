@@ -13,7 +13,8 @@
 #' @importFrom cli cat_line cat_rule cat_boxx
 #' @importFrom styler style_file style_dir
 #' @importFrom foreach foreach %dopar%
-#' @importFrom parallel detectCores makeCluster stopCluster
+#' @importFrom parallel detectCores
+#' @importFrom doParallel registerDoParallel
 #' @importFrom rprojroot find_package_root_file
 #' @export
 #' @return Invisibly returns a list with the output of all steps run.
@@ -44,16 +45,12 @@ ksa_gogoawesomepkg <- function(style = TRUE,
 
     # make cluster for parallel backend
     if (num_threads > 1L) {
-      cl <- parallel::makeCluster(num_threads)
-      doParallel::registerDoParallel(cl)
+      doParallel::registerDoParallel(num_threads)
 
       # style each file separately (faster than styler::style_pkg())
       outlist$styler <- foreach(i = seq_along(files), .combine = "rbind") %dopar% {
         styler::style_file(files[i])
       }
-
-      # stop cluster no matter if success or not
-      on.exit(parallel::stopCluster(cl), add = TRUE)
 
       # print the results from styler
       if (interactive()) {
