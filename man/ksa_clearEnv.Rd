@@ -20,5 +20,4 @@ Removes all objects in the global environment including hidden objects, and afte
 \examples{
 assign("test", "test", envir = .GlobalEnv)
 ksa_clearEnv()
-
 }

@@ -13,8 +13,9 @@
 #'   warning("Some warning")
 #'   some_variable <- "test"
 #'   return(some_variable)
-#'   })
-#'
+#' })
 ksa_suppressAll <- function(expr) {
-  tryCatch({invisible(capture.output(suppressMessages(suppressWarnings(suppressPackageStartupMessages(expr)))))}, error = function(e) invisible())
+  tryCatch({
+    invisible(capture.output(suppressMessages(suppressWarnings(suppressPackageStartupMessages(expr)))))
+  }, error = function(e) invisible())
 }

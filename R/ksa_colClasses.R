@@ -7,10 +7,9 @@
 #' @export
 #'
 #' @examples
-#' df <- iris[1:10,]
+#' df <- iris[1:10, ]
 #' df
 #' ksa_colClasses(df)
-
 ksa_colClasses <- function(df) {
   class <- unlist(lapply(unclass(df), class))
   return(as.data.frame(class))

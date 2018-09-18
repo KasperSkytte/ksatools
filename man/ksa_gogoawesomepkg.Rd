@@ -4,21 +4,26 @@
 \alias{ksa_gogoawesomepkg}
 \title{Document, check, and install a package}
 \usage{
-ksa_gogoawesomepkg(check = FALSE, install = TRUE, pkgdown = TRUE,
-  verbose = TRUE)
+ksa_gogoawesomepkg(style = TRUE, check = TRUE, install = TRUE,
+  pkgdown = TRUE, verbose = TRUE,
+  num_threads = parallel::detectCores() - 2L)
 }
 \arguments{
+\item{style}{Style the source files found in the \code{"R/"} directory using \code{\link[styler]{style_file}}. This is performed in parallel by default on the individual files as it is much faster than simply using \code{\link[styler]{style_dir}}. Set \code{num_threads} to 1 to instead run \code{\link[styler]{style_dir}}. (Default: \code{TRUE})}
+
 \item{check}{Check the package using \code{\link[devtools]{check}} or not. (Default: \code{TRUE})}
 
 \item{install}{Install the package (\code{TRUE}) using \code{\link[devtools]{install}} or just load it in memory (\code{FALSE}) using \code{\link[devtools]{load_all}}. (Default: \code{TRUE})}
 
-\item{pkgdown}{Build package documentation website or not. (Default: \code{TRUE})}
+\item{pkgdown}{Build package documentation website using \code{\link[pkgdown]{build_site}} or not. (Default: \code{TRUE})}
 
 \item{verbose}{Print status messages during the process or not. (Default: \code{TRUE})}
+
+\item{num_threads}{The number of threads to be used if \code{style} is set to \code{TRUE}. (Default: \code{parallel::detectCores() - 2L})}
 }
 \value{
 Invisibly returns a list with the output of all steps run.
 }
 \description{
-Everything I do before commiting changes to GitHub. Generates package man pages, checks, installs, and builds package documentation website etc.
+Everything I do before committing changes to an R package on GitHub. Generates package man pages, checks, installs, and builds package documentation website etc.
 }

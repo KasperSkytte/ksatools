@@ -14,8 +14,11 @@ ksa_colClasses(df) <- value
 \value{
 A dataframe with coerced columns
 }
+\description{
+Set (coerce) the column classes of a dataframe
+}
 \examples{
-df <- iris[1:10,]
+df <- iris[1:10, ]
 df
 ksa_colClasses(df)
 ksa_colClasses(df) <- "nncfc"

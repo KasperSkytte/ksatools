@@ -19,7 +19,7 @@ Returns a vector with the column classes of a dataframe like object, or coerces 
 Cannot handle columns with more than one class.
 }
 \examples{
-df <- iris[1:10,]
+df <- iris[1:10, ]
 df
 ksa_colClasses(df)
 }

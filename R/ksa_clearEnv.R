@@ -12,19 +12,18 @@
 #' @examples
 #' assign("test", "test", envir = .GlobalEnv)
 #' ksa_clearEnv()
-#'
 ksa_clearEnv <- function(envir = .GlobalEnv,
                          hidden = TRUE) {
   objects <- ls(envir = envir, all.names = hidden)
   classes <- c()
-  for(i in 1:length(objects)) {
+  for (i in 1:length(objects)) {
     classes <- append(classes, paste0(class(get(objects[[i]])), collapse = ", "))
-    }
-  if(length(objects) > 0) {
+  }
+  if (length(objects) > 0) {
     rm(list = objects, envir = envir)
     cat(crayon::underline("The following", length(objects), "objects were removed:\n"))
     print.data.frame(data.frame("*object*" = objects, "*class*" = classes, check.names = FALSE), row.names = FALSE, right = FALSE)
-  } else if(length(objects) == 0) {
+  } else if (length(objects) == 0) {
     cat("0 objects were removed")
   }
   cat(crayon::underline("\nGarbage collector:\n"))

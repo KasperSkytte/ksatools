@@ -20,6 +20,5 @@ ksa_suppressAll({
   warning("Some warning")
   some_variable <- "test"
   return(some_variable)
-  })
-
+})
 }
