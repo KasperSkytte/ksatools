@@ -111,5 +111,9 @@ ksa_gogoawesomepkg <- function(style = TRUE,
     attributes(time)$units,
     "! Did you remember to uptick the version in the DESCRIPTION file?"
   ))
+
+  if (!exists("awesomepkgresults", envir = .GlobalEnv)) {
+    assign("awesomepkgresults", outlist, envir = .GlobalEnv)
+  }
   invisible(outlist)
 }
