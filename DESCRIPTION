@@ -2,7 +2,7 @@ Package: ksatools
 Type: Package
 Title: Tools to make my R life easier
 Description: Tools to make my R life easier.
-Version: 0.5
+Version: 0.6
 Author: Kasper Skytte Andersen
 Maintainer: Kasper Skytte Andersen <kasperskytteandersen@gmail.com>
 Authors@R: person(c("Kasper", "Skytte"), "Andersen", role = c("cre", "aut"), email = "kasperskytteandersen@gmail.com")
@@ -14,9 +14,14 @@ Imports:
     devtools,
     crayon,
     pkgdown,
-    cli
+    cli,
+    styler,
+    foreach,
+    parallel,
+    rprojroot
 Remotes:
-    github::hadley/pkgdown
+    github::hadley/pkgdown,
+    github::r-lib/styler
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.0
