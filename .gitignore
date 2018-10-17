@@ -32,8 +32,8 @@ vignettes/*.pdf
 *.utf8.md
 *.knit.md
 
-
 *.Rproj
 .Rproj.user
 
 test/
+docs/CNAME
