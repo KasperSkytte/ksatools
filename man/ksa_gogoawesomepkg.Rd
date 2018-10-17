@@ -25,5 +25,5 @@ ksa_gogoawesomepkg(style = TRUE, check = TRUE, install = TRUE,
 Invisibly returns a list with the output of all steps run.
 }
 \description{
-Everything I do before committing changes to an R package on GitHub. Generates package man pages, checks, installs, and builds package documentation website etc.
+Everything I do before committing changes to an R package on GitHub. First restart R, then generates man pages, checks, installs, and builds package documentation website etc.
 }
