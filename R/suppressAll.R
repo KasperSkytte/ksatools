@@ -6,7 +6,7 @@
 #' @export
 #'
 #' @examples
-#' ksa_suppressAll({
+#' suppressAll({
 #'   stop("Some error")
 #'   print("Some print")
 #'   message("Some message")
@@ -14,7 +14,7 @@
 #'   some_variable <- "test"
 #'   return(some_variable)
 #' })
-ksa_suppressAll <- function(expr) {
+suppressAll <- function(expr) {
   tryCatch({
     invisible(capture.output(suppressMessages(suppressWarnings(suppressPackageStartupMessages(expr)))))
   }, error = function(e) invisible())

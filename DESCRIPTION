@@ -2,7 +2,7 @@ Package: ksatools
 Type: Package
 Title: Tools to make my R life easier
 Description: Tools to make my R life easier.
-Version: 0.7
+Version: 0.7.1
 Author: Kasper Skytte Andersen
 Maintainer: Kasper Skytte Andersen <kasperskytteandersen@gmail.com>
 Authors@R: person(c("Kasper", "Skytte"), "Andersen", role = c("cre", "aut"), email = "kasperskytteandersen@gmail.com")
@@ -25,4 +25,4 @@ Remotes:
     github::r-lib/styler
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1

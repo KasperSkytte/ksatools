@@ -9,10 +9,10 @@
 #' @examples
 #' df <- iris[1:10, ]
 #' df
-#' ksa_colClasses(df)
-#' ksa_colClasses(df) <- "nncfc"
-#' ksa_colClasses(df)
-`ksa_colClasses<-` <- function(df, value) {
+#' colClasses(df)
+#' colClasses(df) <- "nncfc"
+#' colClasses(df)
+`colClasses<-` <- function(df, value) {
   if (nchar(value) != ncol(df)) {
     stop("The number of columns in the dataframe does not match the number of characters in the vector of classes.")
   }

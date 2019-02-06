@@ -10,12 +10,12 @@
 #'
 #' @export
 #' @return Invisibly returns a list with the output of all steps run.
-ksa_gogoawesomepkg <- function(style = TRUE,
-                               check = TRUE,
-                               install = TRUE,
-                               pkgdown = TRUE,
-                               verbose = TRUE,
-                               num_threads = parallel::detectCores() - 2L) {
+gogoawesomepkg <- function(style = TRUE,
+                           check = TRUE,
+                           install = TRUE,
+                           pkgdown = TRUE,
+                           verbose = TRUE,
+                           num_threads = parallel::detectCores() - 2L) {
   afterRestartCmd <- paste0(
     "ksatools:::theactualgogoawesomepkgfunction(\n",
     "  style = ", style, ",\n",
@@ -32,16 +32,16 @@ ksa_gogoawesomepkg <- function(style = TRUE,
 
 #' gogo
 #'
-#' @description See \code{\link{ksa_gogoawesomepkg}}
+#' @description See \code{\link{gogoawesomepkg}}
 #'
-#' @param style Passed on from \code{\link{ksa_gogoawesomepkg}}
-#' @param check Passed on from \code{\link{ksa_gogoawesomepkg}}
-#' @param install Passed on from \code{\link{ksa_gogoawesomepkg}}
-#' @param pkgdown Passed on from \code{\link{ksa_gogoawesomepkg}}
-#' @param verbose Passed on from \code{\link{ksa_gogoawesomepkg}}
-#' @param num_threads Passed on from \code{\link{ksa_gogoawesomepkg}}
+#' @param style Passed on from \code{\link{gogoawesomepkg}}
+#' @param check Passed on from \code{\link{gogoawesomepkg}}
+#' @param install Passed on from \code{\link{gogoawesomepkg}}
+#' @param pkgdown Passed on from \code{\link{gogoawesomepkg}}
+#' @param verbose Passed on from \code{\link{gogoawesomepkg}}
+#' @param num_threads Passed on from \code{\link{gogoawesomepkg}}
 #'
-#' @return See \code{\link{ksa_gogoawesomepkg}}
+#' @return See \code{\link{gogoawesomepkg}}
 #' @importFrom pkgdown clean_site build_site
 #' @importFrom devtools build document install check load_all
 #' @importFrom cli cat_line cat_rule cat_boxx

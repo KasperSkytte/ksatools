@@ -11,9 +11,9 @@
 #'
 #' @examples
 #' assign("test", "test", envir = .GlobalEnv)
-#' ksa_clearEnv()
-ksa_clearEnv <- function(envir = .GlobalEnv,
-                         hidden = TRUE) {
+#' clearEnv()
+clearEnv <- function(envir = .GlobalEnv,
+                     hidden = TRUE) {
   objects <- ls(envir = envir, all.names = hidden)
   classes <- c()
   for (i in 1:length(objects)) {

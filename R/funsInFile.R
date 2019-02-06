@@ -8,9 +8,9 @@
 #'
 #' @return A list of function names found in \code{filename} grouped by package
 #' @export
-ksa_funsInFile <- function(filename,
-                           alphabetic = TRUE,
-                           exclude_pkgs = c("base", "stats", "utils", "methods", "graphics", "grDevices")) {
+funsInFile <- function(filename,
+                       alphabetic = TRUE,
+                       exclude_pkgs = c("base", "stats", "utils", "methods", "graphics", "grDevices")) {
   if (!file.exists(filename)) {
     stop("couldn't find file ", filename)
   }
