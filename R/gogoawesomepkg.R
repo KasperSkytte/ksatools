@@ -16,6 +16,9 @@ gogoawesomepkg <- function(style = TRUE,
                            pkgdown = TRUE,
                            verbose = TRUE,
                            num_threads = parallel::detectCores() - 2L) {
+  if (!isTRUE(Sys.getenv("RSTUDIO") == "1")) {
+    stop("Only works when using RStudio interactively", call. = FALSE)
+  }
   afterRestartCmd <- paste0(
     "ksatools:::theactualgogoawesomepkgfunction(\n",
     "  style = ", style, ",\n",
