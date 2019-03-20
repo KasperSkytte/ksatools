@@ -16,6 +16,7 @@ reference:
     - clearEnv
     - colClasses
     - "`colClasses<-`"
+    - extractImports
     - funsInFile
     - gogoawesomepkg
     - suppressAll

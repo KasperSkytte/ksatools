@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Extract and assign the default values of arguments (formals) of a function — assignFormals • ksatools</title>
+<title>Extract all unique packages listed in a namespace file — extractImports • ksatools</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -31,10 +31,9 @@
 
 
 
-<meta property="og:title" content="Extract and assign the default values of arguments (formals) of a function — assignFormals" />
+<meta property="og:title" content="Extract all unique packages listed in a namespace file — extractImports" />
 
-<meta property="og:description" content="...and assign them to objects with the same names in an environment (global is default).
-This is useful for testing and developing a function by running its source code line by line." />
+<meta property="og:description" content="Extract all unique packages listed in a namespace file" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -101,36 +100,31 @@ This is useful for testing and developing a function by running its source code 
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Extract and assign the default values of arguments (formals) of a function</h1>
+    <h1>Extract all unique packages listed in a namespace file</h1>
     
-    <div class="hidden name"><code>assignFormals.Rd</code></div>
+    <div class="hidden name"><code>extractImports.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>...and assign them to objects with the same names in an environment (global is default).
-This is useful for testing and developing a function by running its source code line by line.</p>
+    <p>Extract all unique packages listed in a namespace file</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>assignFormals</span>(<span class='no'>fun</span>, <span class='kw'>envir</span> <span class='kw'>=</span> <span class='no'>.GlobalEnv</span>)</pre>
+    <pre class="usage"><span class='fu'>extractImports</span>(<span class='kw'>namespace</span> <span class='kw'>=</span> <span class='st'>"NAMESPACE"</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>fun</th>
-      <td><p>Function from which to extract defaults</p></td>
-    </tr>
-    <tr>
-      <th>envir</th>
-      <td><p>Environment in which to assign the default values of the arguments</p></td>
+      <th>namespace</th>
+      <td><p>Path to <code>NAMESPACE</code> file. (<em>default:</em> <code>"NAMESPACE"</code>)</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Nothing (<code><a href='https://www.rdocumentation.org/packages/base/topics/invisible'>invisible()</a></code>). The function is only used for its side-effects.</p>
+    <p>A character vector with the packages found</p>
     
 
   </div>
@@ -142,8 +136,6 @@ This is useful for testing and developing a function by running its source code 
       <li><a href="#value">Value</a></li>
           </ul>
 
-    <h2>Author</h2>
-    <p>Kasper Skytte Andersen</p>
   </div>
 </div>
 
