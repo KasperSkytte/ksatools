@@ -6,6 +6,7 @@
 #' @param alphabetic Sort the result alphabetically or not. (\emph{Default:} \code{TRUE})
 #' @param exclude_pkgs A vector of packagenames that should be excluded from the result. Set to \code{NULL} to include all. (\emph{Default:} \code{c("base", "stats", "utils", "methods", "graphics", "grDevices")})
 #'
+#' @importFrom utils getParseData find
 #' @return A list of function names found in \code{filename} grouped by package
 #' @export
 funsInFile <- function(filename,
@@ -17,7 +18,7 @@ funsInFile <- function(filename,
   if (!tools::file_ext(filename) == "R") {
     warning("expecting *.R file, will try to proceed")
   }
-  tmp <- getParseData(parse(filename, keep.source = TRUE))
+  tmp <- utils::getParseData(parse(filename, keep.source = TRUE))
   nms <- tmp$text[which(tmp$token == "SYMBOL_FUNCTION_CALL")]
   funs <- unique(if (alphabetic) {
     sort(nms)

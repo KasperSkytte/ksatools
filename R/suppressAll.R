@@ -2,7 +2,7 @@
 #' @description Simply wraps the given expression in \code{\link{tryCatch}}, \code{\link{invisible}}, \code{\link{capture.output}}, \code{\link{suppressMessages}}, \code{\link{suppressWarnings}}, and \code{\link{suppressPackageStartupMessages}} to suppress any possible console output.
 #'
 #' @param expr Expression to be evaluated.
-#'
+#' @importFrom utils capture.output
 #' @export
 #'
 #' @examples
@@ -16,6 +16,6 @@
 #' })
 suppressAll <- function(expr) {
   tryCatch({
-    invisible(capture.output(suppressMessages(suppressWarnings(suppressPackageStartupMessages(expr)))))
+    invisible(utils::capture.output(suppressMessages(suppressWarnings(suppressPackageStartupMessages(expr)))))
   }, error = function(e) invisible())
 }
