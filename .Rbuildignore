@@ -3,5 +3,5 @@
 ^\.Rproj\.user$
 ^docs$
 ^test$
-^R/ksa_setNames.R
-^R/FindAndInstall.R
+^.travis.yml$
+^_pkgdown.yml$
