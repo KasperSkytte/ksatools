@@ -12,12 +12,13 @@ template:
 reference:
   - title: Functions
     contents:
-    - ksa_colClasses
-    - ksa_colClasses<-
-    - ksa_clearEnv
-    - ksa_gogoawesomepkg
-    - ksa_suppressAll
-    - ksa_funsInFile
+    - assignFormals
+    - clearEnv
+    - colClasses
+    - "`colClasses<-`"
+    - funsInFile
+    - gogoawesomepkg
+    - suppressAll
 
 navbar:
   title: "ksatools"

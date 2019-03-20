@@ -53,6 +53,7 @@ gogoawesomepkg <- function(style = TRUE,
 #' @importFrom parallel detectCores
 #' @importFrom doParallel registerDoParallel
 #' @importFrom rprojroot find_package_root_file
+#' @keywords internal
 theactualgogoawesomepkgfunction <- function(style = TRUE,
                                             check = TRUE,
                                             install = TRUE,

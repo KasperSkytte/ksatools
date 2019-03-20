@@ -27,3 +27,4 @@ See \code{\link{gogoawesomepkg}}
 \description{
 See \code{\link{gogoawesomepkg}}
 }
+\keyword{internal}
