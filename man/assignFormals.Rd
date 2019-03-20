@@ -12,7 +12,7 @@ assignFormals(fun, envir = .GlobalEnv)
 \item{envir}{Environment in which to assign the default values of the arguments}
 }
 \value{
-Invisibly returns a list with 3 elements; The function formals, assigned formals, and unassigned formals
+Nothing (\code{invisible()}). The function is only used for its side-effects.
 }
 \description{
 ...and assign them to objects with the same names in an environment (global is default).
