@@ -4,6 +4,7 @@
 #' @param install Install the package (\code{TRUE}) using \code{\link[devtools]{install}} or just load it in memory (\code{FALSE}) using \code{\link[devtools]{load_all}}. (Default: \code{TRUE})
 #' @param pkgdown Build package documentation website using \code{\link[pkgdown]{build_site}} or not. (Default: \code{TRUE})
 #' @param verbose Print status messages during the process or not. (Default: \code{TRUE})
+#' @param test Run unit tests with \code{\link[devtools]{test}}. (Default: \code{FALSE})
 #' @param check Check the package using \code{\link[devtools]{check}} or not. (Default: \code{TRUE})
 #' @param style Style the source files found in the \code{"R/"} directory using \code{\link[styler]{style_file}}. This is performed in parallel by default on the individual files as it is much faster than simply using \code{\link[styler]{style_dir}}. Set \code{num_threads} to 1 to instead run \code{\link[styler]{style_dir}}. (Default: \code{TRUE})
 #' @param num_threads The number of threads to be used if \code{style} is set to \code{TRUE}. (Default: \code{parallel::detectCores() - 2L})
@@ -12,6 +13,7 @@
 #' @return Invisibly returns a list with the output of all steps run.
 gogoawesomepkg <- function(style = TRUE,
                            check = TRUE,
+                           test = FALSE,
                            install = TRUE,
                            pkgdown = TRUE,
                            verbose = TRUE,
@@ -23,6 +25,7 @@ gogoawesomepkg <- function(style = TRUE,
     "ksatools:::theactualgogoawesomepkgfunction(\n",
     "  style = ", style, ",\n",
     "  check = ", check, ",\n",
+    "  test = ", test, ",\n",
     "  install = ", install, ",\n",
     "  pkgdown = ", pkgdown, ",\n",
     "  verbose = ", verbose, ",\n",
@@ -39,6 +42,7 @@ gogoawesomepkg <- function(style = TRUE,
 #'
 #' @param style Passed on from \code{\link{gogoawesomepkg}}
 #' @param check Passed on from \code{\link{gogoawesomepkg}}
+#' @param test Passed on from \code{\link{gogoawesomepkg}}
 #' @param install Passed on from \code{\link{gogoawesomepkg}}
 #' @param pkgdown Passed on from \code{\link{gogoawesomepkg}}
 #' @param verbose Passed on from \code{\link{gogoawesomepkg}}
@@ -56,6 +60,7 @@ gogoawesomepkg <- function(style = TRUE,
 #' @keywords internal
 theactualgogoawesomepkgfunction <- function(style = TRUE,
                                             check = TRUE,
+                                            test = FALSE,
                                             install = TRUE,
                                             pkgdown = TRUE,
                                             verbose = TRUE,
@@ -109,6 +114,14 @@ theactualgogoawesomepkgfunction <- function(style = TRUE,
       cli::cat_rule(center = "Building and checking package")
     }
     outlist$devtools_check <- devtools::check(document = FALSE)
+  }
+  
+  ######## unit tests ########
+  if (isTRUE(test)) {
+    if (isTRUE(verbose)) {
+      cli::cat_rule(center = "Running unit tests")
+    }
+    outlist$devtools_test <- devtools::test()
   }
 
   ######## install or load ########
