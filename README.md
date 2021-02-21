@@ -1,4 +1,6 @@
-[![Travis-CI Build Status](https://travis-ci.org/KasperSkytte/ksatools.svg?branch=master)](https://travis-ci.org/KasperSkytte/ksatools)
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/KasperSkytte/ksatools/workflows/R-CMD-check/badge.svg)](https://github.com/KasperSkytte/ksatools/actions)
+<!-- badges: end -->
 
 # ksatools
 > Tools to make my R life easier.
