@@ -3,7 +3,6 @@
 \docType{package}
 \name{ksatools}
 \alias{ksatools}
-\alias{ksatools-package}
 \title{\code{ksatools} package}
 \description{
 Tools to make my R and package development life easier.

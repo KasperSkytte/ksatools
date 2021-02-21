@@ -4,14 +4,22 @@
 \alias{theactualgogoawesomepkgfunction}
 \title{gogo}
 \usage{
-theactualgogoawesomepkgfunction(style = TRUE, check = TRUE,
-  install = TRUE, pkgdown = TRUE, verbose = TRUE,
-  num_threads = parallel::detectCores() - 2L)
+theactualgogoawesomepkgfunction(
+  style = TRUE,
+  check = TRUE,
+  test = FALSE,
+  install = TRUE,
+  pkgdown = TRUE,
+  verbose = TRUE,
+  num_threads = parallel::detectCores() - 2L
+)
 }
 \arguments{
 \item{style}{Passed on from \code{\link{gogoawesomepkg}}}
 
 \item{check}{Passed on from \code{\link{gogoawesomepkg}}}
+
+\item{test}{Passed on from \code{\link{gogoawesomepkg}}}
 
 \item{install}{Passed on from \code{\link{gogoawesomepkg}}}
 

@@ -4,14 +4,22 @@
 \alias{gogoawesomepkg}
 \title{Document, check, and install a package}
 \usage{
-gogoawesomepkg(style = TRUE, check = TRUE, install = TRUE,
-  pkgdown = TRUE, verbose = TRUE,
-  num_threads = parallel::detectCores() - 2L)
+gogoawesomepkg(
+  style = TRUE,
+  check = TRUE,
+  test = FALSE,
+  install = TRUE,
+  pkgdown = TRUE,
+  verbose = TRUE,
+  num_threads = parallel::detectCores() - 2L
+)
 }
 \arguments{
 \item{style}{Style the source files found in the \code{"R/"} directory using \code{\link[styler]{style_file}}. This is performed in parallel by default on the individual files as it is much faster than simply using \code{\link[styler]{style_dir}}. Set \code{num_threads} to 1 to instead run \code{\link[styler]{style_dir}}. (Default: \code{TRUE})}
 
 \item{check}{Check the package using \code{\link[devtools]{check}} or not. (Default: \code{TRUE})}
+
+\item{test}{Run unit tests with \code{\link[devtools]{test}}. (Default: \code{FALSE})}
 
 \item{install}{Install the package (\code{TRUE}) using \code{\link[devtools]{install}} or just load it in memory (\code{FALSE}) using \code{\link[devtools]{load_all}}. (Default: \code{TRUE})}
 
