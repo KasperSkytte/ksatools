@@ -115,7 +115,7 @@ theactualgogoawesomepkgfunction <- function(style = TRUE,
     }
     outlist$devtools_check <- devtools::check(document = FALSE)
   }
-  
+
   ######## unit tests ########
   if (isTRUE(test)) {
     if (isTRUE(verbose)) {

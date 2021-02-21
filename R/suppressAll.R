@@ -15,7 +15,10 @@
 #'   return(some_variable)
 #' })
 suppressAll <- function(expr) {
-  tryCatch({
-    invisible(utils::capture.output(suppressMessages(suppressWarnings(suppressPackageStartupMessages(expr)))))
-  }, error = function(e) invisible())
+  tryCatch(
+    {
+      invisible(utils::capture.output(suppressMessages(suppressWarnings(suppressPackageStartupMessages(expr)))))
+    },
+    error = function(e) invisible()
+  )
 }

@@ -4,8 +4,11 @@
 \alias{funsInFile}
 \title{List all R functions used in a file}
 \usage{
-funsInFile(filename, alphabetic = TRUE, exclude_pkgs = c("base",
-  "stats", "utils", "methods", "graphics", "grDevices"))
+funsInFile(
+  filename,
+  alphabetic = TRUE,
+  exclude_pkgs = c("base", "stats", "utils", "methods", "graphics", "grDevices")
+)
 }
 \arguments{
 \item{filename}{Path to the R script file (only the .R extension is supported)}
