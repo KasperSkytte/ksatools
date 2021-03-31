@@ -7,6 +7,7 @@
 gogoawesomepkg(
   style = TRUE,
   check = TRUE,
+  test = FALSE,
   install = TRUE,
   pkgdown = FALSE,
   verbose = TRUE,
