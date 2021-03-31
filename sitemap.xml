@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://kasperskytte.github.io/ksatools/index.html</loc>
+  </url>
+  <url>
+    <loc>https://kasperskytte.github.io/ksatools/reference/assignFormals.html</loc>
+  </url>
+  <url>
+    <loc>https://kasperskytte.github.io/ksatools/reference/clearEnv.html</loc>
+  </url>
+  <url>
+    <loc>https://kasperskytte.github.io/ksatools/reference/colClasses-set.html</loc>
+  </url>
+  <url>
+    <loc>https://kasperskytte.github.io/ksatools/reference/colClasses.html</loc>
+  </url>
+  <url>
+    <loc>https://kasperskytte.github.io/ksatools/reference/extractImports.html</loc>
+  </url>
+  <url>
+    <loc>https://kasperskytte.github.io/ksatools/reference/funsInFile.html</loc>
+  </url>
+  <url>
+    <loc>https://kasperskytte.github.io/ksatools/reference/gogoawesomepkg.html</loc>
+  </url>
+  <url>
+    <loc>https://kasperskytte.github.io/ksatools/reference/ksatools.html</loc>
+  </url>
+  <url>
+    <loc>https://kasperskytte.github.io/ksatools/reference/suppressAll.html</loc>
+  </url>
+  <url>
+    <loc>https://kasperskytte.github.io/ksatools/reference/theactualgogoawesomepkgfunction.html</loc>
+  </url>
+</urlset>
