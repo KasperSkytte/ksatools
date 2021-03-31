@@ -4,12 +4,18 @@
 
     $('.navbar-fixed-top').headroom();
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 
     $('body').css('padding-top', $('.navbar').height() + 10);
     $(window).resize(function(){
       $('body').css('padding-top', $('.navbar').height() + 10);
     });
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
     $('body').css('padding-top', $('.navbar').height() + 10);
