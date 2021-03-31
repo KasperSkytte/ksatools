@@ -3,6 +3,14 @@
   $(function() {
 
     $('.navbar-fixed-top').headroom();
+<<<<<<< Updated upstream
+=======
+
+    $('body').css('padding-top', $('.navbar').height() + 10);
+    $(window).resize(function(){
+      $('body').css('padding-top', $('.navbar').height() + 10);
+    });
+>>>>>>> Stashed changes
 
     $('body').css('padding-top', $('.navbar').height() + 10);
     $(window).resize(function(){

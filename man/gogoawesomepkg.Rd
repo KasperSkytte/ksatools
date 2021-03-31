@@ -7,9 +7,8 @@
 gogoawesomepkg(
   style = TRUE,
   check = TRUE,
-  test = FALSE,
   install = TRUE,
-  pkgdown = TRUE,
+  pkgdown = FALSE,
   verbose = TRUE,
   num_threads = parallel::detectCores() - 2L
 )

@@ -15,7 +15,7 @@ gogoawesomepkg <- function(style = TRUE,
                            check = TRUE,
                            test = FALSE,
                            install = TRUE,
-                           pkgdown = TRUE,
+                           pkgdown = FALSE,
                            verbose = TRUE,
                            num_threads = parallel::detectCores() - 2L) {
   if (!isTRUE(Sys.getenv("RSTUDIO") == "1")) {
@@ -62,7 +62,7 @@ theactualgogoawesomepkgfunction <- function(style = TRUE,
                                             check = TRUE,
                                             test = FALSE,
                                             install = TRUE,
-                                            pkgdown = TRUE,
+                                            pkgdown = FALSE,
                                             verbose = TRUE,
                                             num_threads = parallel::detectCores() - 2L) {
   t1 <- Sys.time() # track time used

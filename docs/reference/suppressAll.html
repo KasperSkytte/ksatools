@@ -15,11 +15,16 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/simplex/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
 
+<<<<<<< Updated upstream
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
 
 <!-- bootstrap-toc -->
 <link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script>
+=======
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+>>>>>>> Stashed changes
 
 <!-- Font Awesome icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
@@ -29,8 +34,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
+<<<<<<< Updated upstream
 <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+=======
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+>>>>>>> Stashed changes
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -41,6 +51,7 @@
 
 <meta property="og:title" content="Suppress all types of diagnostic messages, error messages, and/or outputs — suppressAll" />
 <meta property="og:description" content="Simply wraps the given expression in tryCatch, invisible, capture.output, suppressMessages, suppressWarnings, and suppressPackageStartupMessages to suppress any possible console output." />
+
 
 
 
@@ -58,10 +69,13 @@
 
 
 
+<<<<<<< Updated upstream
   
 
   
 
+=======
+>>>>>>> Stashed changes
   </head>
 
   <body data-spy="scroll" data-target="#toc">
@@ -125,7 +139,11 @@
     <p>Simply wraps the given expression in <code><a href='https://rdrr.io/r/base/conditions.html'>tryCatch</a></code>, <code><a href='https://rdrr.io/r/base/invisible.html'>invisible</a></code>, <code><a href='https://rdrr.io/r/utils/capture.output.html'>capture.output</a></code>, <code><a href='https://rdrr.io/r/base/message.html'>suppressMessages</a></code>, <code><a href='https://rdrr.io/r/base/warning.html'>suppressWarnings</a></code>, and <code><a href='https://rdrr.io/r/base/message.html'>suppressPackageStartupMessages</a></code> to suppress any possible console output.</p>
     </div>
 
+<<<<<<< Updated upstream
     <pre class="usage"><span class='fu'>suppressAll</span><span class='op'>(</span><span class='va'>expr</span><span class='op'>)</span></pre>
+=======
+    <pre class="usage"><span class='fu'>suppressAll</span>(<span class='no'>expr</span>)</pre>
+>>>>>>> Stashed changes
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -138,6 +156,7 @@
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+<<<<<<< Updated upstream
     <pre class="examples"><div class='input'><span class='fu'>suppressAll</span><span class='op'>(</span><span class='op'>{</span>
   <span class='kw'><a href='https://rdrr.io/r/base/stop.html'>stop</a></span><span class='op'>(</span><span class='st'>"Some error"</span><span class='op'>)</span>
   <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='st'>"Some print"</span><span class='op'>)</span>
@@ -152,6 +171,24 @@
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
+=======
+    <pre class="examples"><div class='input'><span class='fu'>suppressAll</span>({
+  <span class='fu'><a href='https://rdrr.io/r/base/stop.html'>stop</a></span>(<span class='st'>"Some error"</span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='st'>"Some print"</span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/message.html'>message</a></span>(<span class='st'>"Some message"</span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/warning.html'>warning</a></span>(<span class='st'>"Some warning"</span>)
+  <span class='no'>some_variable</span> <span class='kw'>&lt;-</span> <span class='st'>"test"</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/function.html'>return</a></span>(<span class='no'>some_variable</span>)
+})</div></pre>
+  </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+
+>>>>>>> Stashed changes
   </div>
 </div>
 
@@ -162,7 +199,11 @@
 </div>
 
 <div class="pkgdown">
+<<<<<<< Updated upstream
   <p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9000.</p></p>
+=======
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+>>>>>>> Stashed changes
 </div>
 
       </footer>
@@ -171,8 +212,11 @@
   
 
 
+<<<<<<< Updated upstream
   
 
+=======
+>>>>>>> Stashed changes
   </body>
 </html>
 

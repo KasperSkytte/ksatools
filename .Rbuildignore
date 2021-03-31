@@ -7,4 +7,5 @@
 ^test$
 ^.travis.yml$
 ^_pkgdown.yml$
+^pkgdown$
 ^\.github$
